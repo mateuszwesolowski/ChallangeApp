@@ -1,61 +1,20 @@
-﻿var name = "Mateusz";
-bool sex = true; //sex = true -man; sex = false - woman
-var age = 34;
+﻿var name = "Ewa";
+bool isWoman = true;
+var age = 33;
 
-//Komunikat Płeć poniżej/powyżej 30 lat
-
-if (sex == true)
+if (isWoman == true && age < 30)
 {
-    if (age < 30)
-    {
-        Console.WriteLine("Mężczyzna poniżej 30 lat");
-    }
-    else
-    {
-        Console.WriteLine("Mężczyzna powyżej 30 lat");
-    }
+    Console.WriteLine("Kobieta poniżej 30 lat");
 }
-else
+else if (name == "Ewa" && age == 33)
 {
-    if (age < 30)
-    {
-        Console.WriteLine("Kobieta poniżej 30 lat");
-    }
-    else
-    {
-        Console.WriteLine("Kobieta powyżej 30 lat");
-    }
+    Console.WriteLine("Ewa, lat 33");
 }
-
-//Komunikat imię + wiek
-
-if (name == "Mateusz")
-{
-    Console.WriteLine(name + ", lat " + age);
-}
-else
-{
-    Console.WriteLine("Podano inne imię");
-}
-
-
-if (age < 18 && sex == true)
+else if (age < 18 && !isWoman)
 {
     Console.WriteLine("Niepełnoletni mężczyzna");
 }
 else
 {
-    if (sex == true)
-    {
-        Console.WriteLine("Pełnoletni mężczyzna");
-    }
-    else if (age < 18)
-    {
-        Console.WriteLine("Niepełnoletnia kobieta");
-    }
-    else
-    {
-        Console.WriteLine("Pełnoletnia kobieta");
-    }
+    Console.WriteLine("Inne dane");
 }
-
