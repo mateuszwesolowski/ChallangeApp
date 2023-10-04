@@ -48,4 +48,4 @@ foreach (var employee in employees)
     }
 }
 
-Console.WriteLine("Pracownikiem z najlepszym wynikiem: " + employeeWithMaxResult.Result + " został/a: " + employeeWithMaxResult.Name + " " + employeeWithMaxResult.Surname);
+Console.WriteLine("Pracownikiem z najlepszym wynikiem: " + employeeWithMaxResult.Result + " został/a:" + employeeWithMaxResult.Name + " " + employeeWithMaxResult.Surname);

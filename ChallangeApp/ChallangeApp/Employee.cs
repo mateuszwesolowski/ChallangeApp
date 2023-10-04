@@ -1,6 +1,6 @@
 ﻿namespace ChallangeApp
 {
-    internal class Employee
+    public class Employee
     {
         private string name;
         private string surname;
