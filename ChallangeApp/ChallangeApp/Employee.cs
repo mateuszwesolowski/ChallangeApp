@@ -8,6 +8,10 @@
 
         private List<int> score = new List<int>();
 
+        public Employee(string name) 
+        { 
+            this.Name = name;
+        }
         public Employee(string name, string surname, int age)
         {
             this.Name = name;
