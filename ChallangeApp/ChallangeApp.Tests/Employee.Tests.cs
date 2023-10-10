@@ -1,24 +1,51 @@
+using NUnit.Framework;
+
 namespace ChallangeApp.Tests
 {
     public class Tests
     {
-      
         [Test]
-        public void IsSumIsCorrent()
+        public void IsMinValueIsCorrent()
         {
-            //Assert.Pass();
+            var employee = new Employee("Krzysztof", "Malinowski");
+            employee.AddGrade(4);
+            employee.AddGrade(6);
+            employee.AddGrade(2);
 
-            //arrange - przygotowanie
-            var employee = new Employee("Mateusz", "Wesolowski", 34);
-            employee.AddScore(-4);
-            employee.AddScore(-6);
+            var statistics = employee.GetStatistics();
 
-            //act - uruchmienie
-            var result = employee.Result;
+            Assert.AreEqual(2, statistics.Min);
 
-            //assert - czy zosta³y spe³nione warunki
-            Assert.AreEqual(-10, result);
-          
+        }
+
+        [Test]
+        public void IsMaxIsCorrent()
+        {
+
+            var employee = new Employee("Krzysztof", "Malionowski");
+            employee.AddGrade(4);
+            employee.AddGrade(6);
+            employee.AddGrade(2);
+
+            var statistics = employee.GetStatistics();
+
+            Assert.AreEqual(6, statistics.Max);
+
+        }
+
+        [Test]
+        public void IsAvarageValueIsCorrent()
+        {
+
+            var employee = new Employee("Krzysztof", "Malionowski");
+            employee.AddGrade(4);
+            employee.AddGrade(6);
+            employee.AddGrade(2);
+
+            var statistics = employee.GetStatistics();
+
+            Assert.AreEqual(4, statistics.Average);
+
         }
     }
 }
