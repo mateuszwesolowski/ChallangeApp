@@ -27,7 +27,6 @@
             }
             
         }
-
         public void AddGrade(string grade)
         {
             if (float.TryParse(grade, out float result))
@@ -40,7 +39,6 @@
             }
              
         }
-
         public void AddGrade(double grade)
         {
             float gradeFloat = (float)grade;
