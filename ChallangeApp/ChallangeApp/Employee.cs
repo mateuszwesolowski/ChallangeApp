@@ -26,7 +26,7 @@
             }
             else
             {
-                Console.WriteLine("invalide grade value");
+                throw new Exception("Invalide grade value");
             }
             
         }
@@ -40,8 +40,8 @@
                 this.AddGrade(charResult);
 
             else
-            { 
-                Console.WriteLine("String is not float");
+            {
+                throw new Exception("String is not float");
             }
              
         }
@@ -89,9 +89,7 @@
                     break;
                 
                 default:
-                    Console.WriteLine("Wrong letter");
-                    this.AddGrade(0);
-                    break;
+                    throw new Exception("Wrong Letter");
             }
         }
         public Statistics GetStatistics()
