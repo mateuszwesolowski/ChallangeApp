@@ -47,5 +47,24 @@ namespace ChallangeApp.Tests
             Assert.AreEqual(4, statistics.Average);
 
         }
+
+        [Test]
+
+        public void WhenAddAnotherGrade_ReturnCorrectAverage()
+        {
+            var employee = new Employee("Krzysztof", "Jazyna");
+            employee.AddGrade(4);
+            employee.AddGrade(6);   
+            employee.AddGrade('A');
+            employee.AddGrade('c');
+            employee.AddGrade("25");
+
+            var statistics = employee.GetStatistics();
+
+            Assert.AreEqual(39, statistics.Average);
+
+
+        }
+
     }
 }
